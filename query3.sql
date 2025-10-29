@@ -16,3 +16,9 @@ JOIN movies as m ON md.movie_id = m.id
 GROUP BY d.first_name, d.last_name
 ORDER BY count(m.name) DESC
 LIMIT 1;
+
+SELECT count(movies.year) as total_moview , movies.year 
+FROM movies
+GROUP BY movies.year
+ORDER BY count(movies.year) DESC
+LIMIT 1;
